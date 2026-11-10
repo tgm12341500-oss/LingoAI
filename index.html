@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LingoAI | Model Performance Dashboard</title>
+<style>
+:root {
+  --bg:#0b1020; --panel:#151d32; --text:#f1f5f9;
+  --muted:#9aa8bd; --accent:#65e0c1; --blue:#779cff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,sans-serif;line-height:1.6;
+}
+header{
+  padding:65px 8%;background:linear-gradient(120deg,#172b4d,#102c3c);
+  border-bottom:1px solid #293752;
+}
+.tag{color:var(--accent);font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(38px,6vw,64px);margin:12px 0}
+header p{color:#c3d0e2;max-width:700px}
+main{max-width:1150px;margin:auto;padding:35px 22px}
+.section-title{margin:40px 0 18px;font-size:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{
+  background:var(--panel);border:1px solid #293752;
+  border-radius:16px;padding:24px;
+}
+.metric{font-size:36px;font-weight:bold;color:var(--accent);margin:8px 0}
+.card p,.muted{color:var(--muted)}
+.chart{width:100%;border-radius:10px;background:white;margin-top:12px}
+.pill{
+  display:inline-block;padding:6px 12px;border-radius:20px;
+  background:#203c46;color:var(--accent);font-size:13px;margin:4px;
+}
+table{width:100%;border-collapse:collapse}
+th,td{padding:13px;text-align:left;border-bottom:1px solid #344158}
+th{color:var(--accent)}
+footer{text-align:center;color:var(--muted);padding:35px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="tag">MACHINE LEARNING PROJECT</div>
+  <h1>LingoAI</h1>
+  <h2>Intelligent Language Detection System</h2>
+  <p>
+    A machine learning application that identifies the language
+    of input text using TF-IDF feature extraction and LinearSVC
+    classification, supporting 17 languages.
+  </p>
+  <span class="pill">Python</span>
+  <span class="pill">Scikit-learn</span>
+  <span class="pill">TF-IDF</span>
+  <span class="pill">LinearSVC</span>
+  <span class="pill">CustomTkinter</span>
+</header>
+
+<main>
+
+<h2 class="section-title">Model Performance Overview</h2>
+<div class="grid">
+  <div class="card">
+    <p>Test Accuracy</p>
+    <div class="metric">98.83%</div>
+    <p>Measured on the held-out test dataset.</p>
+  </div>
+  <div class="card">
+    <p>Supported Languages</p>
+    <div class="metric">17</div>
+    <p>Multilingual text classification.</p>
+  </div>
+  <div class="card">
+    <p>Test Samples</p>
+    <div class="metric">2,055</div>
+    <p>Samples used for model evaluation.</p>
+  </div>
+  <div class="card">
+    <p>Classification Algorithm</p>
+    <div class="metric" style="font-size:27px">LinearSVC</div>
+    <p>Supervised machine learning.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Model Architecture</h2>
+<div class="grid">
+  <div class="card">
+    <h3>01 — Text Input</h3>
+    <p>Receives text samples for language identification.</p>
+  </div>
+  <div class="card">
+    <h3>02 — Feature Extraction</h3>
+    <p>TF-IDF character n-grams transform text into numerical features.</p>
+  </div>
+  <div class="card">
+    <h3>03 — Classification</h3>
+    <p>LinearSVC predicts the most likely language.</p>
+  </div>
+  <div class="card">
+    <h3>04 — Prediction</h3>
+    <p>The application displays the predicted language to the user.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Confusion Matrix</h2>
+<div class="card">
+  <p class="muted">
+    Actual model predictions across the 17 language classes.
+  </p>
+  <img class="chart"
+       src="outputs/confusion_matrix.png"
+       alt="LingoAI Confusion Matrix">
+</div>
+
+<h2 class="section-title">Evaluation Report</h2>
+<div class="card">
+  <p>
+    The detailed classification report includes precision,
+    recall, F1-score and support for each language.
+  </p>
+  <p>
+    <a href="outputs/evaluation_report.csv" target="_blank">
+      View or download the full evaluation report (CSV)
+    </a>
+  </p>
+</div>
+
+<h2 class="section-title">Technologies</h2>
+<div class="card">
+  <span class="pill">Python</span>
+  <span class="pill">Pandas</span>
+  <span class="pill">NumPy</span>
+  <span class="pill">Scikit-learn</span>
+  <span class="pill">Matplotlib</span>
+  <span class="pill">Seaborn</span>
+  <span class="pill">CustomTkinter</span>
+  <span class="pill">Joblib</span>
+</div>
+
+<h2 class="section-title">Project Information</h2>
+<div class="card">
+  <p><strong>Project:</strong> LingoAI</p>
+  <p><strong>Category:</strong> Natural Language Processing (NLP)</p>
+  <p><strong>Task:</strong> Multiclass Language Classification</p>
+  <p><strong>Developer:</strong> Tasneem Gamal Mohamed</p>
+  <p><strong>GitHub:</strong>
+    <a href="https://github.com/tgm12341500-oss/LingoAI" target="_blank">
+      View Source Code
+    </a>
+  </p>
+</div>
+
+</main>
+
+<footer>
+  LingoAI — Machine Learning Language Detection Project
+</footer>
+
+</body>
+</html>
