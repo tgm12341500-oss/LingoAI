@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# IDE settings
+.vscode/
+
+# Local user data
+history.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+app_backup.py
+# Dataset files
+data/
