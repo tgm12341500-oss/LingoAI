@@ -1,4 +1,8 @@
-
+<p align="center">
+  <img src="assets/Futuristic%20Language%20Detection%20AI%20Banner.png"
+       alt="Language Detection AI Project Cover"
+       width="100%">
+</p>
 # LingoAI – AI Language Detection System
 
 LingoAI is a desktop application that uses Machine Learning and Natural Language Processing (NLP) to automatically identify the language of a given text.
